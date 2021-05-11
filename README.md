@@ -1,4 +1,4 @@
-<img align="right" src="https://github-readme-stats.vercel.app/api?username=Mufanc&show_icons=true&custom_title=Dashboard" alt=""/>
+<img align="right" src="https://github-readme-stats.vercel.app/api?username=Mufanc&show_icons=true&custom_title=Dashboard&hide_border=true" alt=""/>
 
 # Mufanc 🔭
 
@@ -6,7 +6,7 @@
 
 > ✨ 一个喜欢写程序的本科生 ✨
 
-<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs?username=Mufanc&layout=compact&count_private=false" alt="">
+<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs?username=Mufanc&layout=compact&count_private=false&hide_border=true" alt="">
 
 * 专注于 爬虫/逆向/自动化 等阴间技术（x
 
