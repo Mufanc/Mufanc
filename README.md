@@ -40,3 +40,8 @@
 ![Android 9](https://img.shields.io/badge/Android%209-3ddc84?style=flat-square&logo=android&logoColor=ffffff)
 ![Kali Linux 2020.2a](https://img.shields.io/badge/Kali%20Linux%202020.2a-557c94?style=flat-square&logo=kali%20linux&logoColor=ffffff)
 
+## 🗓️ Todo
+
+- [x] 实现 iSmart 自动化
+- [ ] 尽快完成 Auto.py 框架搭建
+- [ ] EdXposed IntentTables 模块
