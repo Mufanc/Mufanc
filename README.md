@@ -27,7 +27,7 @@
 
 ## 📫 Get in touch
 
-[![QQ](https://img.shields.io/badge/-QQ-eb1923?style=flat-square&logo=Tencent%20QQ&logoColor=fff)](http://wpa.qq.com/msgrd?v=3&uin=1714511787&site=qq&menu=yes))
+[![QQ](https://img.shields.io/badge/-QQ-eb1923?style=flat-square&logo=Tencent%20QQ&logoColor=fff)](http://wpa.qq.com/msgrd?v=3&uin=1714511787&site=qq&menu=yes)
 [![BiliBili](https://img.shields.io/badge/-N00bly-00a1d6?style=flat-square&logo=bilibili&logoColor=fff)](https://space.bilibili.com/27183811)
 [![Steam](https://img.shields.io/badge/-Mufanc-000000?style=flat-square&logo=steam&logoColor=white&labelColor=000000)](https://steamcommunity.com/id/Mufanc)
 [![Hexo](https://img.shields.io/badge/-Hexo-0e83cd?style=flat-square&logo=hexo&logoColor=white)](https://mufanc.xyz/)
