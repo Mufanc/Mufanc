@@ -14,7 +14,7 @@
 
 <br/>
 
-![JavaScript](https://img.shields.io/badge/-JavaScript-e5cd0c?style=flat-square&logo=JavaScript&labelColor=f7df1e&logoColor=000)
+![JavaScript](https://img.shields.io/badge/-JavaScript-e5cd0c?style=flat-square&logo=JavaScript&logoColor=000)
 ![CSS3](https://img.shields.io/badge/-CSS3-1572b6?style=flat-square&logo=CSS3&labelColor=1572b6)
 ![Java](https://img.shields.io/badge/-Java-ce0000?style=flat-square&logo=Java&logoColor=fff)
 ![HTML5](https://img.shields.io/badge/-HTML5-e34f26?style=flat-square&logo=HTML5&logoColor=fff)
@@ -27,6 +27,7 @@
 
 ## 📫 Get in touch
 
+[![QQ](https://img.shields.io/badge/-QQ-eb1923?style=flat-square&logo=Tencent%20QQ&logoColor=fff)](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1714511787)
 [![BiliBili](https://img.shields.io/badge/-N00bly-00a1d6?style=flat-square&logo=bilibili&logoColor=fff)](https://space.bilibili.com/27183811)
 [![Steam](https://img.shields.io/badge/-Mufanc-000000?style=flat-square&logo=steam&logoColor=white&labelColor=000000)](https://steamcommunity.com/id/Mufanc)
 [![Hexo](https://img.shields.io/badge/-Hexo-0e83cd?style=flat-square&logo=hexo&logoColor=white)](https://mufanc.xyz/)
