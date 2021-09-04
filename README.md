@@ -44,7 +44,7 @@
 
 ## 🗓️ Todolist
 
-- [x] 实现 iSmart 自动化
+- [ ] 原神 | 全自动钓鱼机
+- [ ] iSmart 自动化进阶 - 快速提交
 - [ ] 尽快完成 Auto.py 框架搭建
-- [ ] EdXposed IntentTables 模块
 - [ ] Hexo 不要再咕咕咕了
