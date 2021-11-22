@@ -14,6 +14,7 @@
 
 <br/>
 
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178c6?style=flat-square&logo=TypeScript&logoColor=000)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-e5cd0c?style=flat-square&logo=JavaScript&logoColor=000)
 ![CSS3](https://img.shields.io/badge/-CSS3-1572b6?style=flat-square&logo=CSS3&labelColor=1572b6)
 ![Java](https://img.shields.io/badge/-Java-ce0000?style=flat-square&logo=Java&logoColor=fff)
@@ -41,7 +42,7 @@
 ![Android 11](https://img.shields.io/badge/Android%2011-3ddc84?style=flat-square&logo=android&logoColor=ffffff)
 ![Android 9](https://img.shields.io/badge/Android%209-3ddc84?style=flat-square&logo=android&logoColor=ffffff)
 ![Kali Linux 2020.2a](https://img.shields.io/badge/Kali%20Linux%202020.2a-557c94?style=flat-square&logo=kali%20linux&logoColor=ffffff)
-![iPadOS 14.4.1](https://img.shields.io/badge/iPadOS%2014.4.1-000?style=flat-square&logo=apple&logoColor=fff)
+![iPadOS 14.8.1](https://img.shields.io/badge/iPadOS%2014.8.1-000?style=flat-square&logo=apple&logoColor=fff)
 
 ## 🗓️ Todolist
 
