@@ -32,6 +32,7 @@
 [![Steam](https://img.shields.io/badge/-Mufanc-000000?style=flat-square&logo=steam&logoColor=white&labelColor=000000)](https://steamcommunity.com/id/Mufanc)
 [![Hexo](https://img.shields.io/badge/-Hexo-0e83cd?style=flat-square&logo=hexo&logoColor=white)](https://mufanc.xyz/)
 [![Hexo](https://img.shields.io/badge/-Hexo%20Gitee-c71d23?style=flat-square&logo=gitee&logoColor=white)](https://mufanc.gitee.io/)
+[![Telegram Channel](https://img.shields.io/badge/Telegram%20Channel-3db6f1?style=flat-square&logo=Telegram&logoColor=2ca5e0)](https://t.me/mufanc_wf)
 
 ## 💻 Working environment
 
