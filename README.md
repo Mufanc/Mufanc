@@ -1,8 +1,8 @@
 <img align="right" src="https://github-readme-stats.vercel.app/api?username=Mufanc&show_icons=true&custom_title=Dashboard&hide_border=true" alt=""/>
 
-# Mufanc 🔭
+# Mufanc 👀
 
-### Hi there 👋 This... It's me? Okay.
+[comment]: <> (### Hi there 👋 This... It's me? Okay.)
 
 > ✨ 一个喜欢写程序的本科生 ✨
 
@@ -26,7 +26,7 @@
 ![Python](https://img.shields.io/badge/-Python-3776ab?style=flat-square&logo=python&logoColor=fff)
 ![Batch](https://img.shields.io/badge/-Batch-4d4d4d?style=flat-square&logo=windows%20terminal&logoColor=fff)
 
-## 📫 Get in touch
+## 📫 联系方式
 
 [![Telegram](https://img.shields.io/badge/Telegram-3db6f1?style=flat-square&logo=Telegram&logoColor=2ca5e0)](https://t.me/Mufanc)
 [![BiliBili](https://img.shields.io/badge/-N00bly-00a1d6?style=flat-square&logo=bilibili&logoColor=fff)](https://space.bilibili.com/27183811)
@@ -34,6 +34,8 @@
 [![Hexo](https://img.shields.io/badge/-Hexo-0e83cd?style=flat-square&logo=hexo&logoColor=white)](https://mufanc.xyz/)
 [![Hexo](https://img.shields.io/badge/-Hexo%20Gitee-c71d23?style=flat-square&logo=gitee&logoColor=white)](https://mufanc.gitee.io/)
 [![Telegram Channel](https://img.shields.io/badge/Telegram%20Channel-3db6f1?style=flat-square&logo=Telegram&logoColor=2ca5e0)](https://t.me/mufanc_wf)
+
+<!--
 
 ## 💻 Working environment
 
@@ -44,9 +46,11 @@
 ![Kali Linux 2020.2a](https://img.shields.io/badge/Kali%20Linux%202020.2a-557c94?style=flat-square&logo=kali%20linux&logoColor=ffffff)
 ![iPadOS 14.8.1](https://img.shields.io/badge/iPadOS%2014.8.1-000?style=flat-square&logo=apple&logoColor=fff)
 
-## 🗓️ Todolist
+-->
+
+## 🗓️ 咕咕咕
 
 - [x] 原神 | 全自动钓鱼机
 - [x] iSmart 自动化进阶 - 快速提交
 - [ ] 尽快完成 Auto.py 框架搭建
-- [ ] Hexo 不要再咕咕咕了
+- [ ] Scrcpy - Sui
