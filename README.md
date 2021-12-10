@@ -2,8 +2,6 @@
 
 # Mufanc 👀
 
-[comment]: <> (### Hi there 👋 This... It's me? Okay.)
-
 > ✨ 一个喜欢写程序的本科生 ✨
 
 <img align="right" src="https://github-readme-stats.vercel.app/api/top-langs?username=Mufanc&layout=compact&count_private=false&hide_border=true" alt="">
@@ -35,20 +33,11 @@
 [![Hexo](https://img.shields.io/badge/-Hexo%20Gitee-c71d23?style=flat-square&logo=gitee&logoColor=white)](https://mufanc.gitee.io/)
 [![Telegram Channel](https://img.shields.io/badge/Telegram%20Channel-3db6f1?style=flat-square&logo=Telegram&logoColor=2ca5e0)](https://t.me/mufanc_wf)
 
-<!--
+## 🤔 咕咕咕
 
-## 💻 Working environment
+![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=Mufanc&layout=compact&hide=Text,XML)
 
-![Windows 10 Pro](https://img.shields.io/badge/Windows%2010%20Pro-00adef?style=flat-square&logo=windows&logoColor=ffffff)
-![Ubuntu 20.04 LTS](https://img.shields.io/badge/Ubuntu%2020.04%20LTS-dd4814?style=flat-square&logo=ubuntu&logoColor=ffffff)
-![Android 11](https://img.shields.io/badge/Android%2011-3ddc84?style=flat-square&logo=android&logoColor=ffffff)
-![Android 9](https://img.shields.io/badge/Android%209-3ddc84?style=flat-square&logo=android&logoColor=ffffff)
-![Kali Linux 2020.2a](https://img.shields.io/badge/Kali%20Linux%202020.2a-557c94?style=flat-square&logo=kali%20linux&logoColor=ffffff)
-![iPadOS 14.8.1](https://img.shields.io/badge/iPadOS%2014.8.1-000?style=flat-square&logo=apple&logoColor=fff)
-
--->
-
-## 🗓️ 咕咕咕
+## 🗓️ TodoList
 
 - [x] 原神 | 全自动钓鱼机
 - [x] iSmart 自动化进阶 - 快速提交
