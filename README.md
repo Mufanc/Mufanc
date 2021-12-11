@@ -35,10 +35,7 @@
 
 ## 🤔 咕咕咕
 
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
-
-[comment]: <> (![Wakatime Stats]&#40;https://github-readme-stats.vercel.app/api/wakatime?username=Mufanc&layout=compact&hide=Text,XML&#41;)
+![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=Mufanc&layout=compact&hide=Text,XML)
 
 ## 🗓️ TodoList
 
