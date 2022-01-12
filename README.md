@@ -2,7 +2,7 @@
 
 # Mufanc 👀
 
-> ✨ 一个喜欢写程序的本科生 ✨
+> ✨ 一个爱写程序的本科生 ✨
 
 <img align="right" src="https://github-readme-stats.vercel.app/api/top-langs?username=Mufanc&layout=compact&count_private=false&hide_border=true" alt="">
 
