@@ -37,7 +37,7 @@
 
 ## 🤔 咕咕咕
 
-![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=Mufanc&layout=compact&hide=Text)
+![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=Mufanc&layout=compact&hide=Text,AUTO_DETECTED)
 
 ## 🗓️ TodoList
 
