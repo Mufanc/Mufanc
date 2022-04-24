@@ -44,8 +44,3 @@
 
 ![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=Mufanc&layout=compact&hide=Text,AUTO_DETECTED,Other)
 
-## 🗓️ TodoList
-
-- [x] 原神 | 全自动钓鱼机
-- [x] iSmart 自动化进阶 - 快速提交
-- [ ] 尽快完成 Auto.py 框架搭建
