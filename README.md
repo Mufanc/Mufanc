@@ -36,11 +36,10 @@
 [![Hexo](https://img.shields.io/badge/-Hexo-0e83cd?style=flat-square&logo=hexo&logoColor=white)](https://blog.mufanc.xyz/)
 [![Telegram Channel](https://img.shields.io/badge/Telegram%20Channel-3db6f1?style=flat-square&logo=Telegram&logoColor=2ca5e0)](https://t.me/mufanc_wf)
 
-## 🎮 人菜瘾大
-
-![Genshin Dashboard](https://genshin-card.getloli.com/4,10,13,19,22,27,30,37,42,58,59/279928949.png)
-
 ## 🤔 咕咕咕
 
 ![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=Mufanc&layout=compact&hide=Text,AUTO_DETECTED,Other)
 
+## 🎮 人菜瘾大
+
+![Genshin Dashboard](https://genshin-card.getloli.com/4,10,13,19,22,27,30,37,42,58,59/279928949.png)
