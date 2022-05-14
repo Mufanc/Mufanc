@@ -31,10 +31,7 @@
 * 学习使用 git 中，如果仓库有任何不规范的地方欢迎各位大佬指正（轻喷
 
 [![Telegram](https://img.shields.io/badge/Telegram-3db6f1?style=flat-square&logo=Telegram&logoColor=2ca5e0)](https://t.me/Mufanc)
-[![BiliBili](https://img.shields.io/badge/-N00bly-00a1d6?style=flat-square&logo=bilibili&logoColor=fff)](https://space.bilibili.com/27183811)
-[![Steam](https://img.shields.io/badge/-Mufanc-000000?style=flat-square&logo=steam&logoColor=white&labelColor=000000)](https://steamcommunity.com/id/Mufanc)
 [![Hexo](https://img.shields.io/badge/-Hexo-0e83cd?style=flat-square&logo=hexo&logoColor=white)](https://blog.mufanc.xyz/)
-[![Telegram Channel](https://img.shields.io/badge/Telegram%20Channel-3db6f1?style=flat-square&logo=Telegram&logoColor=2ca5e0)](https://t.me/mufanc_wf)
 
 ## 🤔 咕咕咕
 
