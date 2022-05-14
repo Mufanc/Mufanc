@@ -39,7 +39,3 @@
 ## 🤔 咕咕咕
 
 ![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=Mufanc&layout=compact&hide=Text,AUTO_DETECTED,Other)
-
-## 🎮 人菜瘾大
-
-![Genshin Dashboard](https://genshin-card.getloli.com/4,10,13,19,22,27,30,37,42,58,59/279928949.png)
