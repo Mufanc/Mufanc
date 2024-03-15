@@ -12,11 +12,6 @@
 
 <br/>
 
-## 📫 联系方式
-
-[![Telegram](https://img.shields.io/badge/Telegram-3db6f1?style=flat-square&logo=Telegram&logoColor=white)](https://t.me/Mufanc)
-[![Hexo](https://img.shields.io/badge/-Hexo-0e83cd?style=flat-square&logo=hexo&logoColor=white)](https://blog.mufanc.xyz/)
-
 ## 🤔 咕咕咕
 
 ![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=Mufanc&layout=compact&hide=Text,AUTO_DETECTED,Other)
