@@ -8,6 +8,6 @@
 
 ## 🕊️ 咕咕咕
 
-![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=Mufanc&hide_border=true&layout=compact&hide=Text,AUTO_DETECTED,Other)
+![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=Mufanc&layout=compact&hide=Text,AUTO_DETECTED,Other)
 
 ![](https://count.getloli.com/get/@mufanc?theme=rule12)
