@@ -7,7 +7,7 @@
 <p align="center">
   <img
     align="center"
-    src="https://skillicons.dev/icons?i=rust,kotlin,ts,py&theme=light" />
+    src="https://skillicons.dev/icons?i=py,ts,rust,linux,androidstudio&theme=light" />
 </p>
 
 <p align="center">
