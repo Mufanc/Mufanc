@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Mufanc&show_icons=true&include_all_commits=true&hide_border=false&show_icons=true" />
+  <img src="https://readme-stats.mufanc.xyz/api?username=Mufanc&show_icons=true&include_all_commits=true&hide_border=false&show_icons=true" />
 </p>
 
 <p align="center">
@@ -25,8 +25,8 @@
 
 <!-- https://github.com/anuraghazra/github-readme-stats -->
 <p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=@Mufanc&theme=transparent&hide_border=true&langs_count=5&range=all_time&hide=Text,AUTO_DETECTED,Other" />
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=Mufanc&theme=transparent&layout=compact&count_private=false&hide_border=true&langs_count=8" />
+  <img align="center" src="https://readme-stats.mufanc.xyz/api/wakatime?username=@Mufanc&theme=transparent&hide_border=true&langs_count=5&range=all_time&hide=Text,AUTO_DETECTED,Other" />
+  <img align="center" src="https://readme-stats.mufanc.xyz/api/top-langs?username=Mufanc&theme=transparent&layout=compact&count_private=false&hide_border=true&langs_count=8" />
   <br/>
 </p>
 
