@@ -26,7 +26,7 @@
 <!-- https://github.com/anuraghazra/github-readme-stats -->
 <p align="center">
   <img align="center" src="https://readme-stats.mufanc.xyz/api/wakatime?username=@Mufanc&theme=transparent&hide_border=true&langs_count=5&range=all_time&hide=Text,AUTO_DETECTED,Other" />
-  <img align="center" src="https://readme-stats.mufanc.xyz/api/top-langs?username=Mufanc&theme=transparent&layout=compact&count_private=false&hide_border=true&langs_count=8" />
+  <img align="center" src="https://readme-stats.mufanc.xyz/api/top-langs?username=Mufanc&theme=transparent&layout=compact&count_private=true&count_archive=false&hide_border=true&langs_count=8" />
   <br/>
 </p>
 
