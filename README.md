@@ -1,7 +1,15 @@
 <!-- https://github.com/kyechan99/capsule-render -->
-<p align="center">
+<!-- <p align="center">
   <img
     src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=Mufanc&section=header&reversal=false&textBg=false&fontAlignY=36" />
+</p> -->
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://githubroast.dev/api/card/mufanc?theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://githubroast.dev/api/card/mufanc?theme=light" />
+    <img alt="GitHub Roast" src="https://githubroast.dev/api/card/mufanc?theme=light" width="800" />
+  </picture>
 </p>
 
 <p align="center">
@@ -19,8 +27,7 @@
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Mufanc/Mufanc/output/github-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mufanc/Mufanc/output/github-snake.svg" />
     <img alt="github-snake" src="https://raw.githubusercontent.com/Mufanc/Mufanc/output/github-snake.svg" />
-</picture>
-  
+  </picture>
 </p>
 
 <!-- https://github.com/anuraghazra/github-readme-stats -->
