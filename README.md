@@ -4,13 +4,13 @@
     src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=Mufanc&section=header&reversal=false&textBg=false&fontAlignY=36" />
 </p> -->
 
-<p align="center">
+<!-- <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://githubroast.dev/api/card/mufanc?theme=dark" />
     <source media="(prefers-color-scheme: light)" srcset="https://githubroast.dev/api/card/mufanc?theme=light" />
     <img alt="GitHub Roast" src="https://githubroast.dev/api/card/mufanc?theme=light" width="800" />
   </picture>
-</p>
+</p> -->
 
 <p align="center">
   <img
@@ -37,9 +37,9 @@
   <br/>
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <img
     width="800"
     src="https://github-readme-activity-graph.vercel.app/graph?username=Mufanc&theme=github-compact&hide_border=true&area=true" />
   <br />
-</p>
+</p> -->
