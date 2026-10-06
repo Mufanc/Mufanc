@@ -1,4 +1,4 @@
-name: Generate snake animation
+name: Generate profile
 
 on:
   schedule:
@@ -10,14 +10,20 @@ on:
     branches:
     - main
 
+concurrency:
+  group: profile-output
+  cancel-in-progress: false
+
 jobs:
   generate:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     steps:
+      - uses: actions/checkout@v4
+
       - name: generate snake.svg
         uses: ArthurLobopro/snk/svg-only@v0
         with:
@@ -26,7 +32,16 @@ jobs:
             dist/github-snake.svg?hide_stack=true
             dist/github-snake-dark.svg?palette=github-dark&hide_stack=true
     
-      - name: push snake.svg to the output branch
+      - name: Generate complete profile SVGs
+        run: python3 scripts/generate-profile.py
+
+      - name: Validate generated SVGs
+        run: python3 scripts/check-profile.py dist
+
+      - name: Remove intermediate inputs
+        run: rm -r dist/inputs
+
+      - name: Publish profile and snake SVGs
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
