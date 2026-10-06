@@ -104,8 +104,12 @@ for dark in [False,True]:
  snake=(P/('snake-dark.svg' if dark else 'snake.svg')).read_bytes()
  # Crop only the original SVG's blank margins; keep every animation definition.
  sr=E.fromstring(snake);sr.set('viewBox','-16 -18 880 132');sr.set('height','132')
- image(E.tostring(sr),18,590,864,112)
- assert len(r.findall(N+'image'))==2 and b'@keyframes' in E.tostring(sr)
+ sr.attrib.update(id='contribution-snake', x='18', y='590', width='864', height='112')
+ # Inline the animated nodes: nested image resources can render only a static frame.
+ for style in sr.iter(N+'style'):
+  style.text=style.text.replace(':root', '#contribution-snake')
+ r.append(sr)
+ assert len(r.findall(N+'image'))==1 and b'@keyframes' in E.tostring(sr)
  target=args.output/f'profile-{theme}.svg'
  E.ElementTree(r).write(target,encoding='unicode')
  print(f'Generated {target}')
