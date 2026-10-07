@@ -24,3 +24,8 @@ for theme in ('light', 'dark'):
     assert len(segments) == 8
     assert abs(sum(float(e.get('width')) for e in segments) - 337) < 1, 'Invalid language shares'
     print(f'{theme}: self-contained, animation intact, rounded language bar verified')
+
+    usage = svg.find(f"{ns}svg[@id='codex-usage']")
+    assert usage is not None and len(usage.findall(ns + 'rect')) == 365
+    ids = [e.get('id') for e in svg.iter() if e.get('id')]
+    assert len(ids) == len(set(ids)), 'Duplicate SVG IDs'

@@ -2,12 +2,15 @@ from pathlib import Path
 from xml.etree import ElementTree as E
 from copy import deepcopy
 import base64
+import json
+from codex_usage import panel
 import argparse
 import re
 import time
 from urllib.request import urlopen, Request
 N='{http://www.w3.org/2000/svg}';E.register_namespace('',N[1:-1]);P=Path(__file__).resolve().parent
 parser=argparse.ArgumentParser()
+parser.add_argument('--usage', type=Path, required=True, help='Daily aggregate JSON from the usage-data branch')
 parser.add_argument('--assets',type=Path,help='Use local SVG inputs instead of fetching')
 parser.add_argument('--output',type=Path,default=Path('dist'))
 args=parser.parse_args()
@@ -104,12 +107,15 @@ for dark in [False,True]:
  snake=(P/('snake-dark.svg' if dark else 'snake.svg')).read_bytes()
  # Crop only the original SVG's blank margins; keep every animation definition.
  sr=E.fromstring(snake);sr.set('viewBox','-16 -18 880 132');sr.set('height','132')
- sr.attrib.update(id='contribution-snake', x='18', y='590', width='864', height='112')
+ sr.attrib.update(id='contribution-snake', x='10', y='582', width='880', height='132')
  # Inline the animated nodes: nested image resources can render only a static frame.
  for style in sr.iter(N+'style'):
   style.text=style.text.replace(':root', '#contribution-snake')
  r.append(sr)
  assert len(r.findall(N+'image'))==1 and b'@keyframes' in E.tostring(sr)
+ el('path', d='M28 720H872', stroke=line)
+ r.append(panel(json.loads(args.usage.read_text()), dark))
+ r.set('height', '953'); r.set('viewBox', '0 0 900 953')
  target=args.output/f'profile-{theme}.svg'
  E.ElementTree(r).write(target,encoding='unicode')
  print(f'Generated {target}')

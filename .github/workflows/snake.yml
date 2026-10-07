@@ -24,6 +24,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Read token data from its dedicated branch
+        uses: actions/checkout@v4
+        with:
+          ref: usage-data
+          path: usage-data
+          sparse-checkout: data/codex-usage.json
+          sparse-checkout-cone-mode: false
+
       - name: generate snake.svg
         uses: ArthurLobopro/snk/svg-only@v0
         with:
@@ -32,8 +40,11 @@ jobs:
             dist/github-snake.svg?hide_stack=true
             dist/github-snake-dark.svg?palette=github-dark&hide_stack=true
     
+      - name: Check usage aggregation and rate limits
+        run: python3 scripts/test_codex_usage.py
+
       - name: Generate complete profile SVGs
-        run: python3 scripts/generate-profile.py
+        run: python3 scripts/generate-profile.py --usage usage-data/data/codex-usage.json
 
       - name: Validate generated SVGs
         run: python3 scripts/check-profile.py dist
@@ -45,6 +56,8 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
