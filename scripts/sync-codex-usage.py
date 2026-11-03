@@ -1,5 +1,6 @@
-"""CodexBar hook. Defaults to export-only; --publish explicitly enables GitHub writes."""
+"""Profile API sync (also usable as a CodexBar hook). Defaults to export-only; --publish explicitly enables GitHub writes."""
 import argparse
+import sys
 from contextlib import ExitStack
 import base64
 import fcntl
@@ -10,6 +11,8 @@ import subprocess
 import time
 from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
+from urllib.request import Request, urlopen
+from urllib.error import HTTPError
 
 TZ = ZoneInfo("Asia/Shanghai")
 
@@ -18,12 +21,12 @@ BOT = {'name': 'github-actions[bot]', 'email': '41898282+github-actions[bot]@use
 
 def export(payload, today=None):
     today = today or datetime.now(TZ).date()
-    records = [p for p in payload if p.get('provider') == 'codex']
-    if len(records) != 1 or records[0].get('source') != 'local':
-        raise ValueError('Expected one local Codex usage report')
+    if payload.get('is_self') is not True:
+        raise ValueError('Expected the authenticated user profile')
+
     daily = {}
-    for row in records[0]['daily']:
-        day, tokens = date.fromisoformat(row['date']), row['totalTokens']
+    for row in payload['page']['activity_graph']['daily_usage_buckets']:
+        day, tokens = date.fromisoformat(row['start_date']), row['tokens']
         if type(tokens) is not int or tokens < 0 or day.isoformat() in daily:
             raise ValueError('Invalid or duplicate daily usage')
         if today - timedelta(days=364) <= day <= today:
@@ -31,6 +34,27 @@ def export(payload, today=None):
     if not daily:
         raise ValueError('No daily records; refusing to replace published data')
     return {'version': 1, 'as_of': today.isoformat(), 'daily': dict(sorted(daily.items()))}
+
+
+def fetch_usage():
+    auth_path = Path(os.environ.get('CODEX_HOME', str(Path.home() / '.codex'))) / 'auth.json'
+    tokens = json.loads(auth_path.read_text())['tokens']
+    request = Request(
+        'https://chatgpt.com/backend-api/profiles/mufanc.xyz/page?personal=false',
+        headers={
+            'Authorization': 'Bearer ' + tokens['access_token'],
+            'ChatGPT-Account-Id': tokens['account_id'],
+            'Accept': 'application/json',
+            'User-Agent': 'codex-profile-readonly-check',
+        },
+    )
+
+    try:
+        with urlopen(request, timeout=30) as response:
+            return json.load(response)
+    except HTTPError as error:
+        raise RuntimeError(f'Profile API HTTP {error.code}; check Codex login if unauthorized') from None
+
 
 
 def eligible(state, now, day):
@@ -42,7 +66,7 @@ def eligible(state, now, day):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--publish', action='store_true')
-    parser.add_argument('--codexbar', default='/opt/homebrew/bin/codexbar')
+    parser.add_argument('--force', action='store_true', help='Explicit manual sync bypassing cooldowns; retains the lock')
     parser.add_argument('--gh', default='/opt/homebrew/bin/gh')
     parser.add_argument('--output', type=Path, help='Write sanitized export locally')
     parser.add_argument('--state', type=Path, default=Path.home() / '.cache/mufanc-profile/usage-sync.json')
@@ -65,14 +89,13 @@ def main():
                 return
             if args.state.exists():
                 state = json.loads(args.state.read_text())
-            if not eligible(state, now, day):
+            if not args.force and not eligible(state, now, day):
                 print('Skip: publication rate limit')
                 return
             state['last_attempt'] = now
             save()
 
-        raw = subprocess.run([args.codexbar, 'cost', '--provider', 'codex', '--days', '365', '--format', 'json', '--refresh'], check=True, capture_output=True, text=True, timeout=120)
-        data = export(json.loads(raw.stdout))
+        data = export(fetch_usage())
         content = json.dumps(data, ensure_ascii=False, sort_keys=True, indent=2) + '\n'
         if args.output:
             args.output.write_text(content)
@@ -103,4 +126,10 @@ def main():
 
 
 if __name__ == '__main__':
+    # The macOS system Python request stack is rejected by this endpoint.
+    python = Path('/opt/homebrew/bin/python3')
+
+    if Path(sys.executable).resolve() != python.resolve():
+        os.execv(str(python), [str(python), *sys.argv])
+
     main()

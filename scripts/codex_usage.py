@@ -1,4 +1,4 @@
-"""Daily CodexBar export and SVG panel; only aggregate dates/tokens leave this machine."""
+"""Profile API daily usage SVG panel; only aggregate dates/tokens leave this machine."""
 from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 from xml.etree import ElementTree as E
@@ -32,7 +32,7 @@ def panel(data, dark):
     )
     root = E.Element(N + 'svg', {'id': 'codex-usage', 'x': '0', 'y': '733', 'width': '900', 'height': '210', 'viewBox': '0 0 900 210', 'role': 'img', 'aria-labelledby': 'usage-title usage-desc'})
     E.SubElement(root, N + 'title', {'id': 'usage-title'}).text = 'Codex token activity'
-    E.SubElement(root, N + 'desc', {'id': 'usage-desc'}).text = f'Local daily totalTokens, including cached usage. Snapshot {end}. Missing records are unknown, not zero.'
+    E.SubElement(root, N + 'desc', {'id': 'usage-desc'}).text = f'ChatGPT Profile API daily tokens, using server date buckets. Snapshot {end}. Missing records are unknown, not zero.'
 
     def text(x, y, value, size, color, weight='400', mono=False, **attrs):
         attrs.update(x=str(x), y=str(y), fill=color)

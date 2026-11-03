@@ -17,11 +17,11 @@ export = sync.export
 
 class UsageChecks(unittest.TestCase):
     def test_export_and_weekly_render(self):
-        source = [{'provider': 'codex', 'source': 'local', 'projects': [{'path': '/private/project'}], 'daily': [
-            {'date': '2026-10-04', 'totalTokens': 100, 'cacheReadTokens': 90},
-            {'date': '2026-10-05', 'totalTokens': 30},
-            {'date': '2026-10-08', 'totalTokens': 20},
-        ]}]
+        source = {'is_self': True, 'page': {'activity_graph': {'daily_usage_buckets': [
+            {'start_date': '2026-10-04', 'tokens': 100, 'chat_turns': 9},
+            {'start_date': '2026-10-05', 'tokens': 30},
+            {'start_date': '2026-10-08', 'tokens': 20},
+        ]}}}
         data = export(source, date(2026, 10, 8))
         self.assertEqual(set(data), {'version', 'as_of', 'daily'})
         self.assertEqual(sum(data['daily'].values()), 150)  # Do not add cached tokens twice.
@@ -31,9 +31,18 @@ class UsageChecks(unittest.TestCase):
             numbers = [t.text for t in svg.findall(N + 'text')]
             self.assertIn('150', numbers)
             self.assertIn('50', numbers)  # Monday onward; Sunday belongs to last week.
-        source[0]['daily'].append({'date': '2026-10-08', 'totalTokens': 20})
+        source['page']['activity_graph']['daily_usage_buckets'].append({'start_date': '2026-10-08', 'tokens': 20})
         with self.assertRaises(ValueError):
             export(source, date(2026, 10, 8))
+
+    def test_reject_invalid_profile(self):
+        for payload in [
+            {'is_self': False},
+            {'is_self': True, 'page': {'activity_graph': {'daily_usage_buckets': []}}},
+            {'is_self': True, 'page': {'activity_graph': {'daily_usage_buckets': [{'start_date': '2026-10-08', 'tokens': -1}]}}},
+        ]:
+            with self.assertRaises(ValueError):
+                export(payload, date(2026, 10, 8))
 
     def test_zero_and_missing_are_distinct(self):
         data = {'version': 1, 'as_of': '2026-10-08', 'daily': {'2026-10-08': 0}}
@@ -42,19 +51,19 @@ class UsageChecks(unittest.TestCase):
 
     def test_bot_upload_stays_off_main(self):
         today = sync.datetime.now(sync.TZ).date().isoformat()
-        raw = [{'provider': 'codex', 'source': 'local', 'daily': [{'date': today, 'totalTokens': 10}]}]
+        raw = {'is_self': True, 'page': {'activity_graph': {'daily_usage_buckets': [{'start_date': today, 'tokens': 10}]}}}
         remote = {'sha': 'previous-blob', 'content': base64.b64encode(json.dumps({'daily': {}}).encode()).decode()}
-        replies = [SimpleNamespace(stdout=json.dumps(raw)), SimpleNamespace(stdout=json.dumps(remote)), SimpleNamespace(stdout='{}'), SimpleNamespace(stdout='')]
-        with TemporaryDirectory() as temp, patch.object(sync.subprocess, 'run', side_effect=replies) as run:
+        replies = [SimpleNamespace(stdout=json.dumps(remote)), SimpleNamespace(stdout='{}'), SimpleNamespace(stdout='')]
+        with TemporaryDirectory() as temp, patch.object(sync.subprocess, 'run', side_effect=replies) as run, patch.object(sync, 'fetch_usage', return_value=raw):
             with patch('sys.argv', ['sync', '--publish', '--state', str(Path(temp) / 'state.json')]):
                 sync.main()
-            self.assertIn('?ref=usage-data', run.call_args_list[1].args[0][-1])
-            body = json.loads(run.call_args_list[2].kwargs['input'])
+            self.assertIn('?ref=usage-data', run.call_args_list[0].args[0][-1])
+            body = json.loads(run.call_args_list[1].kwargs['input'])
             self.assertEqual(body['branch'], 'usage-data')
             self.assertEqual(body['author'], sync.BOT)
             self.assertEqual(body['committer'], sync.BOT)
-            self.assertEqual(run.call_args_list[3].args[0][-2:], ['--ref', 'main'])
-            self.assertIn('workflow', run.call_args_list[3].args[0])
+            self.assertEqual(run.call_args_list[2].args[0][-2:], ['--ref', 'main'])
+            self.assertIn('workflow', run.call_args_list[2].args[0])
             state = json.loads((Path(temp) / 'state.json').read_text())
             self.assertEqual(state['pushes'], 1)
             self.assertFalse(state['pending_dispatch'])
